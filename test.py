@@ -50,7 +50,7 @@ class RealTimeDataProcess(object):
             return
         # 整理数据，或存入数据库，或发往队列
         print(self.data)
-        mdb.insertNormalData(self.data['serialnum'], self.data['message'])
+        # mdb.insertNormalData(self.data['serialnum'], self.data['message'])
 
 
 class AlarmDataProcess(object):

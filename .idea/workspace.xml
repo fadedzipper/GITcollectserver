@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ff30eec-4fa4-4982-8783-554765e4f3e9" name="Default Changelist" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeviceExample.py" afterPath="$PROJECT_DIR$/DeviceExample.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mysql_db.py" afterPath="$PROJECT_DIR$/Mysql_db.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/device_config.cfg" afterPath="$PROJECT_DIR$/device_config.cfg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
@@ -16,53 +14,81 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/DCDeviceModel$DeviceExample.coverage" NAME="DeviceExample Coverage Results" MODIFIED="1595242199391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DCDeviceModel$startup.coverage" NAME="startup Coverage Results" MODIFIED="1595242189966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DCDeviceModel$Mysql_db.coverage" NAME="Mysql_db Coverage Results" MODIFIED="1595242180860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DCDeviceModel$DeviceExample.coverage" NAME="DeviceExample Coverage Results" MODIFIED="1595243071996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DCDeviceModel$startup.coverage" NAME="startup Coverage Results" MODIFIED="1595243058178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DCDeviceModel$Mysql_db.coverage" NAME="Mysql_db Coverage Results" MODIFIED="1595256262797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="startup.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="startup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/startup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="379">
+              <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mysql_db.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Mysql_db.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Mysql_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="148" column="1" lean-forward="false" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
+            <state relative-caret-position="434">
+              <caret line="86" column="19" lean-forward="false" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1595242180568" expanded="true" signature="1368:1410" ph="select id fr... device_device" />
-                <marker date="1595242180568" expanded="true" signature="1651:1666" ph="select id fr... device_" />
-                <marker date="1595242180568" expanded="true" signature="1651:1694" ph="select id fr... device_alarmtype" />
-                <marker date="1595242180568" expanded="true" signature="1651:1696" ph="select id fr... device_alarmtype" />
-                <marker date="1595242180568" expanded="true" signature="1996:2052" ph="select dev_k... device_devicesecret" />
-                <marker date="1595242180568" expanded="true" signature="2342:2430" ph="update devic... " />
-                <marker date="1595242180568" expanded="true" signature="2610:2667" ph="update devic... " />
-                <marker date="1595242180568" expanded="true" signature="2826:2884" ph="update devic... " />
-                <marker date="1595242180568" expanded="true" signature="3137:3412" ph="insert into device_devicehistorydata... " />
-                <marker date="1595242180568" expanded="true" signature="3792:4023" ph="update devic... " />
-                <marker date="1595242180568" expanded="true" signature="4764:4792" ph="insert into device_device... " />
-                <marker date="1595242180568" expanded="true" signature="4764:4840" ph="insert into device_alarmdata... " />
-                <marker date="1595242180568" expanded="true" signature="4764:4882" ph="insert into device_alarmdata... " />
+                <marker date="1595256427190" expanded="true" signature="1368:1410" ph="select id fr... device_device" />
+                <marker date="1595256427190" expanded="true" signature="1666:1681" ph="select id fr... device_" />
+                <marker date="1595256427190" expanded="true" signature="1666:1709" ph="select id fr... device_alarmtype" />
+                <marker date="1595256427190" expanded="true" signature="1666:1711" ph="select id fr... device_alarmtype" />
+                <marker date="1595256427190" expanded="true" signature="1985:2253" ph="insert into device_devicedata... " />
+                <marker date="1595256427190" expanded="true" signature="2689:2704" ph="select id fr... de" />
+                <marker date="1595256427190" expanded="true" signature="2689:2738" ph="select devic... device_devicedata" />
+                <marker date="1595256427190" expanded="true" signature="2689:2740" ph="select devic... device_devicedata" />
+                <marker date="1595256427190" expanded="true" signature="3103:3159" ph="select dev_k... device_devicesecret" />
+                <marker date="1595256427190" expanded="true" signature="3464:3552" ph="update devic... " />
+                <marker date="1595256427190" expanded="true" signature="3732:3789" ph="update devic... " />
+                <marker date="1595256427190" expanded="true" signature="3948:4006" ph="update devic... " />
+                <marker date="1595256427190" expanded="true" signature="4259:4534" ph="insert into device_devicehistorydata... " />
+                <marker date="1595256427190" expanded="true" signature="4935:5165" ph="update devic... " />
+                <marker date="1595256427190" expanded="true" signature="6165:6193" ph="insert into device_device... " />
+                <marker date="1595256427190" expanded="true" signature="6165:6241" ph="insert into device_alarmdata... " />
+                <marker date="1595256427190" expanded="true" signature="6165:6283" ph="insert into device_alarmdata... " />
+                <marker date="1595256427190" expanded="true" signature="7696:7931" ph="update devic... " />
+                <marker date="1595256427190" expanded="true" signature="7696:7932" ph="update devic... " />
+                <marker date="1595256427190" expanded="true" signature="7696:7934" ph="update devic... " />
+                <marker date="1595256427190" expanded="true" signature="7696:7959" ph="update devic... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/1267793430/builtins.py">
+      <file leaf-file-name="err.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Envs/collect_server/Lib/site-packages/pymysql/err.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="504" column="4" lean-forward="false" selection-start-line="504" selection-start-column="4" selection-end-line="504" selection-end-column="4" />
+            <state relative-caret-position="340">
+              <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="protocol.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Envs/collect_server/Lib/site-packages/pymysql/protocol.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="219" column="0" lean-forward="false" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connections.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Envs/collect_server/Lib/site-packages/pymysql/connections.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="683" column="0" lean-forward="false" selection-start-line="683" selection-start-column="0" selection-end-line="683" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,8 +109,8 @@
       <file leaf-file-name="device_config.cfg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/device_config.cfg">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+            <state relative-caret-position="510">
+              <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -93,18 +119,8 @@
       <file leaf-file-name="conf.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="configparser.py" pinned="false" current-in-tab="false">
-        <entry file="file://E:/python37/Lib/configparser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="677" column="8" lean-forward="false" selection-start-line="677" selection-start-column="8" selection-end-line="677" selection-end-column="8" />
+            <state relative-caret-position="1061">
+              <caret line="71" column="28" lean-forward="false" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -113,15 +129,15 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="79" column="32" lean-forward="false" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+            <state relative-caret-position="-93">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1595242094262" expanded="true" signature="2407:2565" ph="insert into device_device... " />
-                <marker date="1595242094262" expanded="true" signature="3099:3156" ph="select id fr... device_device" />
-                <marker date="1595242094262" expanded="true" signature="3586:3686" ph="insert into device_devicesecret... " />
-                <marker date="1595242094262" expanded="true" signature="9042:9086" ph="select id fr... device_device" />
-                <marker date="1595242094262" expanded="true" signature="9329:9515" ph="select PM25,... device_deviceconf" />
+                <marker date="1595242989629" expanded="true" signature="2409:2567" ph="insert into device_device... " />
+                <marker date="1595242989629" expanded="true" signature="3101:3158" ph="select id fr... device_device" />
+                <marker date="1595242989629" expanded="true" signature="3588:3688" ph="insert into device_devicesecret... " />
+                <marker date="1595242989629" expanded="true" signature="9044:9088" ph="select id fr... device_device" />
+                <marker date="1595242989629" expanded="true" signature="9331:9517" ph="select PM25,... device_deviceconf" />
               </folding>
             </state>
           </provider>
@@ -132,16 +148,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="protocol.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Envs/collect_server/Lib/site-packages/twisted/internet/protocol.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="589" column="8" lean-forward="false" selection-start-line="589" selection-start-column="8" selection-end-line="589" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -163,9 +169,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/conf.py" />
-        <option value="$PROJECT_DIR$/device_config.cfg" />
         <option value="$PROJECT_DIR$/DeviceExample.py" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/device_config.cfg" />
         <option value="$PROJECT_DIR$/Mysql_db.py" />
       </list>
     </option>
@@ -240,7 +246,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DeviceExample">
+  <component name="RunManager" selected="Python.Mysql_db">
     <configuration default="false" name="DeviceExample" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -487,9 +493,9 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.DeviceExample" />
-        <item index="1" class="java.lang.String" itemvalue="Python.startup" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Mysql_db" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Mysql_db" />
+        <item index="1" class="java.lang.String" itemvalue="Python.DeviceExample" />
+        <item index="2" class="java.lang.String" itemvalue="Python.startup" />
       </list>
     </recent_temporary>
   </component>
@@ -522,20 +528,29 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15396996" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33975086" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33295584" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15396996" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="查找" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -583,19 +598,27 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1595242180568" expanded="true" signature="1368:1410" ph="select id fr... device_device" />
-            <marker date="1595242180568" expanded="true" signature="1651:1666" ph="select id fr... device_" />
-            <marker date="1595242180568" expanded="true" signature="1651:1694" ph="select id fr... device_alarmtype" />
-            <marker date="1595242180568" expanded="true" signature="1651:1696" ph="select id fr... device_alarmtype" />
-            <marker date="1595242180568" expanded="true" signature="1996:2052" ph="select dev_k... device_devicesecret" />
-            <marker date="1595242180568" expanded="true" signature="2342:2430" ph="update devic... " />
-            <marker date="1595242180568" expanded="true" signature="2610:2667" ph="update devic... " />
-            <marker date="1595242180568" expanded="true" signature="2826:2884" ph="update devic... " />
-            <marker date="1595242180568" expanded="true" signature="3137:3412" ph="insert into device_devicehistorydata... " />
-            <marker date="1595242180568" expanded="true" signature="3792:4023" ph="update devic... " />
-            <marker date="1595242180568" expanded="true" signature="4764:4792" ph="insert into device_device... " />
-            <marker date="1595242180568" expanded="true" signature="4764:4840" ph="insert into device_alarmdata... " />
-            <marker date="1595242180568" expanded="true" signature="4764:4882" ph="insert into device_alarmdata... " />
+            <marker date="1595256427190" expanded="true" signature="1368:1410" ph="select id fr... device_device" />
+            <marker date="1595256427190" expanded="true" signature="1666:1681" ph="select id fr... device_" />
+            <marker date="1595256427190" expanded="true" signature="1666:1709" ph="select id fr... device_alarmtype" />
+            <marker date="1595256427190" expanded="true" signature="1666:1711" ph="select id fr... device_alarmtype" />
+            <marker date="1595256427190" expanded="true" signature="1985:2253" ph="insert into device_devicedata... " />
+            <marker date="1595256427190" expanded="true" signature="2689:2704" ph="select id fr... de" />
+            <marker date="1595256427190" expanded="true" signature="2689:2738" ph="select devic... device_devicedata" />
+            <marker date="1595256427190" expanded="true" signature="2689:2740" ph="select devic... device_devicedata" />
+            <marker date="1595256427190" expanded="true" signature="3103:3159" ph="select dev_k... device_devicesecret" />
+            <marker date="1595256427190" expanded="true" signature="3464:3552" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="3732:3789" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="3948:4006" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="4259:4534" ph="insert into device_devicehistorydata... " />
+            <marker date="1595256427190" expanded="true" signature="4935:5165" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="6165:6193" ph="insert into device_device... " />
+            <marker date="1595256427190" expanded="true" signature="6165:6241" ph="insert into device_alarmdata... " />
+            <marker date="1595256427190" expanded="true" signature="6165:6283" ph="insert into device_alarmdata... " />
+            <marker date="1595256427190" expanded="true" signature="7696:7931" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="7696:7932" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="7696:7934" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="7696:7959" ph="update devic... " />
           </folding>
         </state>
       </provider>
@@ -648,11 +671,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1595242094262" expanded="true" signature="2407:2565" ph="insert into device_device... " />
-            <marker date="1595242094262" expanded="true" signature="3099:3156" ph="select id fr... device_device" />
-            <marker date="1595242094262" expanded="true" signature="3586:3686" ph="insert into device_devicesecret... " />
-            <marker date="1595242094262" expanded="true" signature="9042:9086" ph="select id fr... device_device" />
-            <marker date="1595242094262" expanded="true" signature="9329:9515" ph="select PM25,... device_deviceconf" />
+            <marker date="1595242989629" expanded="true" signature="2409:2567" ph="insert into device_device... " />
+            <marker date="1595242989629" expanded="true" signature="3101:3158" ph="select id fr... device_device" />
+            <marker date="1595242989629" expanded="true" signature="3588:3688" ph="insert into device_devicesecret... " />
+            <marker date="1595242989629" expanded="true" signature="9044:9088" ph="select id fr... device_device" />
+            <marker date="1595242989629" expanded="true" signature="9331:9517" ph="select PM25,... device_deviceconf" />
           </folding>
         </state>
       </provider>
@@ -689,22 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/device_config.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/1267793430/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -721,21 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="79" column="32" lean-forward="false" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1595242094262" expanded="true" signature="2407:2565" ph="insert into device_device... " />
-            <marker date="1595242094262" expanded="true" signature="3099:3156" ph="select id fr... device_device" />
-            <marker date="1595242094262" expanded="true" signature="3586:3686" ph="insert into device_devicesecret... " />
-            <marker date="1595242094262" expanded="true" signature="9042:9086" ph="select id fr... device_device" />
-            <marker date="1595242094262" expanded="true" signature="9329:9515" ph="select PM25,... device_deviceconf" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DeviceExample.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -746,34 +738,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mysql_db.py">
+    <entry file="file://$PROJECT_DIR$/conf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="148" column="1" lean-forward="false" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
+        <state relative-caret-position="1061">
+          <caret line="71" column="28" lean-forward="false" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/device_config.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-93">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1595242180568" expanded="true" signature="1368:1410" ph="select id fr... device_device" />
-            <marker date="1595242180568" expanded="true" signature="1651:1666" ph="select id fr... device_" />
-            <marker date="1595242180568" expanded="true" signature="1651:1694" ph="select id fr... device_alarmtype" />
-            <marker date="1595242180568" expanded="true" signature="1651:1696" ph="select id fr... device_alarmtype" />
-            <marker date="1595242180568" expanded="true" signature="1996:2052" ph="select dev_k... device_devicesecret" />
-            <marker date="1595242180568" expanded="true" signature="2342:2430" ph="update devic... " />
-            <marker date="1595242180568" expanded="true" signature="2610:2667" ph="update devic... " />
-            <marker date="1595242180568" expanded="true" signature="2826:2884" ph="update devic... " />
-            <marker date="1595242180568" expanded="true" signature="3137:3412" ph="insert into device_devicehistorydata... " />
-            <marker date="1595242180568" expanded="true" signature="3792:4023" ph="update devic... " />
-            <marker date="1595242180568" expanded="true" signature="4764:4792" ph="insert into device_device... " />
-            <marker date="1595242180568" expanded="true" signature="4764:4840" ph="insert into device_alarmdata... " />
-            <marker date="1595242180568" expanded="true" signature="4764:4882" ph="insert into device_alarmdata... " />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1595242989629" expanded="true" signature="2409:2567" ph="insert into device_device... " />
+            <marker date="1595242989629" expanded="true" signature="3101:3158" ph="select id fr... device_device" />
+            <marker date="1595242989629" expanded="true" signature="3588:3688" ph="insert into device_devicesecret... " />
+            <marker date="1595242989629" expanded="true" signature="9044:9088" ph="select id fr... device_device" />
+            <marker date="1595242989629" expanded="true" signature="9331:9517" ph="select PM25,... device_deviceconf" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/startup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="379">
+          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Envs/collect_server/Lib/site-packages/pymysql/err.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Envs/collect_server/Lib/site-packages/pymysql/protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="219" column="0" lean-forward="false" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Envs/collect_server/Lib/site-packages/pymysql/connections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="683" column="0" lean-forward="false" selection-start-line="683" selection-start-column="0" selection-end-line="683" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mysql_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="86" column="19" lean-forward="false" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1595256427190" expanded="true" signature="1368:1410" ph="select id fr... device_device" />
+            <marker date="1595256427190" expanded="true" signature="1666:1681" ph="select id fr... device_" />
+            <marker date="1595256427190" expanded="true" signature="1666:1709" ph="select id fr... device_alarmtype" />
+            <marker date="1595256427190" expanded="true" signature="1666:1711" ph="select id fr... device_alarmtype" />
+            <marker date="1595256427190" expanded="true" signature="1985:2253" ph="insert into device_devicedata... " />
+            <marker date="1595256427190" expanded="true" signature="2689:2704" ph="select id fr... de" />
+            <marker date="1595256427190" expanded="true" signature="2689:2738" ph="select devic... device_devicedata" />
+            <marker date="1595256427190" expanded="true" signature="2689:2740" ph="select devic... device_devicedata" />
+            <marker date="1595256427190" expanded="true" signature="3103:3159" ph="select dev_k... device_devicesecret" />
+            <marker date="1595256427190" expanded="true" signature="3464:3552" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="3732:3789" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="3948:4006" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="4259:4534" ph="insert into device_devicehistorydata... " />
+            <marker date="1595256427190" expanded="true" signature="4935:5165" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="6165:6193" ph="insert into device_device... " />
+            <marker date="1595256427190" expanded="true" signature="6165:6241" ph="insert into device_alarmdata... " />
+            <marker date="1595256427190" expanded="true" signature="6165:6283" ph="insert into device_alarmdata... " />
+            <marker date="1595256427190" expanded="true" signature="7696:7931" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="7696:7932" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="7696:7934" ph="update devic... " />
+            <marker date="1595256427190" expanded="true" signature="7696:7959" ph="update devic... " />
+          </folding>
         </state>
       </provider>
     </entry>
