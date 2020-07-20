@@ -10,7 +10,7 @@ import datetime
 import data_package
 
 
-mdb = Mysql_db.MysqlConnect('47.104.190.205', 'root', 'LI8023FEI', 'dcs3', 3306)
+mdb = Mysql_db.MysqlConnect('127.0.0.1', 'root', 'root', 'dcs03', 3306)
 keylist = ["PM25", "PM10", "SO2", "NO2", "CO", "O3", "WindSpeed", "WindDirection", "Light", "CO2", "Temperature", "Humidity", "AirPressure"]
 # 队列
 web_req_queue, web_resp_queue = None, None
