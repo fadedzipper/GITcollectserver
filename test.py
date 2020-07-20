@@ -88,7 +88,7 @@ class RegisterDataProcess(object):
         sql = "insert into device_device(serial, mac, is_register, is_enable, is_online, register_time, last_login_time) \
                 values(%s, %s, %d, %d, %d, %s, %s)" \
               % (repr(self.data['serialnum']), repr(self.data['mac']),
-                 True, True, True, repr(str(datetime.datetime.now())), repr(str(datetime.datetime.now())))
+                 False, True, True, repr(str(datetime.datetime.now())), repr(str(datetime.datetime.now())))
         try:
             mdb.exec_data(sql)
         except Exception as e:
