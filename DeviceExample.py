@@ -77,7 +77,7 @@ class OnlineRequest(object):
                 if ops == 'resp-register':
                     is_register = 1
                     deviceConfig.device_register = is_register
-                    deviceConfig.update_configure('device', 'is_register', is_register)
+                    deviceConfig.update_configure('device', 'is_register', str(is_register))
                     return True
                 elif ops == 'register-except':
                     print("设备信息注册时发生异常，注册失败.")
