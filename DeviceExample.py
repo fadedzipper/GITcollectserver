@@ -155,6 +155,8 @@ class RealTimeDataProcessing(object):
         self.warndata['WarnCount'] = 0
         self.warndata['WarnName'] = 'None'
         self.warndata['content'] = 'None'
+        self.warndata['key'] = deviceConfig.device_key
+        self.data['key'] = deviceConfig.device_key
         for name in keylist:
             if name in self.data['message'].keys():
                 # print(name)

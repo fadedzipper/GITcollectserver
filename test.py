@@ -11,7 +11,7 @@ import data_package
 
 
 mdb = Mysql_db.MysqlConnect('127.0.0.1', 'root', 'root', 'dcs03', 3306)
-keylist = ["PM25", "PM10", "SO2", "NO2", "CO", "O3", "WindSpeed", "WindDirection", "Light", "CO2", "Temperature", "Humidity", "AirPressure"]
+keylist = ["PM25", "PM10", "SO2", "NO2", "CO", "O3", "WindSpeed", "Light", "CO2", "Temperature", "Humidity", "AirPressure"]
 # 队列
 web_req_queue, web_resp_queue = None, None
 delimiter = b'\r\n\r\n'
@@ -72,8 +72,12 @@ class AlarmDataProcess(object):
             return
         for k in keylist:
             if self.data['message'][k]['warn']:
-                #
+
+                # 0905170211: insert into database
                 print("insert data to db.")
+                typename = k + "over"
+                mdb.insertAlarmData(self.data['serialnum'], typename, self.data['message'][k]['value'])
+                # 0905170211: end
 
 
 class RegisterDataProcess(object):
