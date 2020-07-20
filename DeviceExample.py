@@ -399,8 +399,8 @@ def received_data():
                     if data['serialnum'] == deviceConfig.device_serial:
                         deviceConfig.device_key = data['key']
                         deviceConfig.device_active = data['status']
-                        deviceConfig.update_configure('device', 'is_active', data['status'])
-                        deviceConfig.update_configure('device', 'key', data['key'])
+                        deviceConfig.update_configure('device', 'is_active', str(data['status']))
+                        deviceConfig.update_configure('device', 'key', str(data['key']))
                         # 发送激活成功反馈[设备端配置成功]信息 给 服务器
                         data_package.device_active_resp['serialnum'] = deviceConfig.device_serial
                         data_package.device_active_resp['key'] = deviceConfig.device_key
@@ -408,19 +408,19 @@ def received_data():
                         tcpCliSock.sendall(json.dumps(data_package.device_active_resp).encode('gb2312') + delimiter)
                 elif msg_option == 'updateconf':
                     if data['serialnum'] == deviceConfig.device_serial:
-                        deviceConfig.update_configure('settings', 'PM25', data['message']['PM25'])
-                        deviceConfig.update_configure('settings', 'PM10', data['message']['PM10'])
-                        deviceConfig.update_configure('settings', 'SO2', data['message']['SO2'])
-                        deviceConfig.update_configure('settings', 'NO2', data['message']['NO2'])
-                        deviceConfig.update_configure('settings', 'CO', data['message']['CO'])
-                        deviceConfig.update_configure('settings', 'O3', data['message']['O3'])
-                        deviceConfig.update_configure('settings', 'WindSpeed', data['message']['WindSpeed'])
-                        deviceConfig.update_configure('settings', 'Light', data['message']['Light'])
-                        deviceConfig.update_configure('settings', 'CO2', data['message']['CO2'])
-                        deviceConfig.update_configure('settings', 'Temperature', data['message']['Temperature'])
-                        deviceConfig.update_configure('settings', 'Humidity', data['message']['Humidity'])
-                        deviceConfig.update_configure('settings', 'AirPressure', data['message']['AirPressure'])
-                        deviceConfig.update_configure('settings', 'Frequency', data['message']['Frequency'])
+                        deviceConfig.update_configure('settings', 'PM25', str(data['message']['PM25']))
+                        deviceConfig.update_configure('settings', 'PM10', str(data['message']['PM10']))
+                        deviceConfig.update_configure('settings', 'SO2', str(data['message']['SO2']))
+                        deviceConfig.update_configure('settings', 'NO2', str(data['message']['NO2']))
+                        deviceConfig.update_configure('settings', 'CO', str(data['message']['CO']))
+                        deviceConfig.update_configure('settings', 'O3', str(data['message']['O3']))
+                        deviceConfig.update_configure('settings', 'WindSpeed', str(data['message']['WindSpeed']))
+                        deviceConfig.update_configure('settings', 'Light', str(data['message']['Light']))
+                        deviceConfig.update_configure('settings', 'CO2', str(data['message']['CO2']))
+                        deviceConfig.update_configure('settings', 'Temperature', str(data['message']['Temperature']))
+                        deviceConfig.update_configure('settings', 'Humidity', str(data['message']['Humidity']))
+                        deviceConfig.update_configure('settings', 'AirPressure', str(data['message']['AirPressure']))
+                        deviceConfig.update_configure('settings', 'Frequency', str(data['message']['Frequency']))
                         deviceConfig.set_pm25 = data['message']['PM25']
                         deviceConfig.set_pm10 = data['message']['PM10']
                         deviceConfig.set_so2 = data['message']['SO2']

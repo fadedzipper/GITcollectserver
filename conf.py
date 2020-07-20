@@ -75,4 +75,7 @@ class DeviceConfigure(object):
 
     def update_configure(self, group, key, value):
         self.config.set(group, key, value)
+        with open(conf_path, "w") as f:
+            self.config.write(f)
+
 
