@@ -177,6 +177,58 @@ class MysqlConnect(object):
         return True
 # end
 
+# 0905170211: 2020/7/21
+
+    def insertdeviceconf(self, serial, data):
+        dev_id = self.getidbyserial(serial)
+        if dev_id < 0:
+            return False
+
+        sql = "insert into device_deviceconf(PM25, PM10, SO2, NO2, CO, O3, \
+               WindSpeed, Light, CO2, Temperature, Humidity, \
+               AirPressure, Frequency, device_id_id, device_update_time, \
+              update_status, update_time) \
+               values(%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %f, %d, %d, %s, %d, %s)" \
+              % (data["PM25"], data["PM10"], data["SO2"], data["NO2"], data["CO"], \
+                 data["O3"], data["WindSpeed"], data["Light"], \
+                 data["CO2"], data["Temperature"], data["Humidity"], data["AirPressure"], \
+                 data["Frequency"], dev_id, repr(str(datetime.datetime.now())), 1, \
+                 repr(str(datetime.datetime.now())))
+        self.exec_data(sql)
+        return True
+#end
+
+    # 0905170211: 2020/7/21 11:43
+    def getdeviceconf(self, serial):
+        dev_id = self.getidbyserial(serial)
+        if dev_id < 0:
+            return False
+
+        sql = "SELECT PM25, PM10, SO2, NO2, CO, O3, \
+                        WindSpeed, Light, CO2, Temperature, Humidity, \
+                        AirPressure, Frequency FROM device_deviceconf \
+                        WHERE device_id_id = %d" % (dev_id)
+        self.cursor.execute(sql)
+        results = self.cursor.fetchall()
+        data = {}
+        for row in results:
+            data['PM25'] = row[0]
+            data['PM10'] = row[1]
+            data['SO2'] = row[2]
+            data['NO2'] = row[3]
+            data['CO'] = row[4]
+            data['O3'] = row[5]
+            data['WindSpeed'] = row[6]
+            data['Light'] = row[7]
+            data['CO2'] = row[8]
+            data['Temperature'] = row[9]
+            data['Humidity'] = row[10]
+            data['AirPressure'] = row[11]
+            data['Frequency'] = row[12]
+
+        return data
+    # end
+
 # 0905170211: 2020/7/20 18:28
 # if __name__ == '__main__':
 #     # def __init__(self, host, user, password, database, port):
@@ -214,4 +266,27 @@ class MysqlConnect(object):
 #
 #     mc.exec(sql)
 # 哎，sql语句里面, time后面多了一个逗号，太坑了
+# end
+
+# 0905170211: 2020/7/21
+# if __name__ == '__main__':
+#     # def __init__(self, host, user, password, database, port):
+#     mc = MysqlConnect('127.0.0.1', 'root', 'root', 'dcs03', 3306)
+#     # mc.exec('insert into auth_user(id, name, salary) values(%d, %s, %f)'%(1, repr('lize'), 4566.7))
+#     data = {'PM25': 120, 'PM10': 88, 'SO2': 391, 'NO2': 3294, 'CO': 22, 'O3': 20, 'WindSpeed': 7, 'Light': 575, 'CO2': 569, 'Temperature': 25, 'Humidity': 80, 'AirPressure': 0.4, 'Frequency' : 10}
+#     res = mc.insertdeviceconf("ASN11000012", data)
+#     print(res)
+
+# end
+
+# 0905170211: 2020/7/21 11:44
+
+if __name__ == '__main__':
+    # def __init__(self, host, user, password, database, port):
+    mc = MysqlConnect('127.0.0.1', 'root', 'root', 'dcs03', 3306)
+    # mc.exec('insert into auth_user(id, name, salary) values(%d, %s, %f)'%(1, repr('lize'), 4566.7))
+    res = mc.getdeviceconf("ASN11000012")
+    if res != False:
+        print(res)
+
 # end

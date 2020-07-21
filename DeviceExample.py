@@ -129,6 +129,13 @@ class OnlineRequest(object):
 #         tcpCliSock.sendall(json.dumps(self.data).encode(ecoding) + delimiter)
 #         return True
 
+# class afteractive_firstcommitconf(object):
+#     def __init__(self, data):
+#         self.data = data
+#
+#     def sendconf(self):
+
+
 
 class HeartedData(object):
     def __init__(self, data):
@@ -334,6 +341,7 @@ class RealTimeDataProcessing(object):
                 elif name == "AirPressure":
                     value_ap = round(random.uniform(0.5, 0.1), 2)
                     # if value_ap > 1.5 or value_ap < 0.8:
+                    # print("DeviceExample.py 344: " + str(deviceConfig.set_airpressure))
                     if value_ap > deviceConfig.set_airpressure:
                         self.warnflag = True
                         self.warndata['message'][name]['value'] = value_ap
@@ -466,6 +474,7 @@ if __name__ == "__main__":
         HeartedData(data_package.Hearted_Data).send()
         time.sleep(deviceConfig.set_frequency)
     print("设备已经激活，开始发送采集数据...")
+
     while not is_shutdown:
         # 若注册设备被禁用，则持续发送心跳包
         if deviceConfig.device_disabled == 1:

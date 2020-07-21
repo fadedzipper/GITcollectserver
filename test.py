@@ -172,6 +172,9 @@ class SettingRespProcess(object):
             if not ret:
                 log.msg("处理配置反馈信息时，更新数据库失败.")
 
+            else:
+                log.msg("新的设备conf已经配置成功")
+
 
 class ActiveRespProcess(object):
     """
@@ -190,6 +193,17 @@ class ActiveRespProcess(object):
         # -- [201700100010012：2020-07-20 11:08]
         # coding here
         # -- [201700100010012: End]
+
+# class afteractive_insertconfintodb(object):
+#     """
+#     设备首次激活之后，向采集服务器发送自己的阈值配置信息，前端可以看到
+#     """
+#     def __init__(self, data):
+#         self.data = data
+#
+#     def insertconf(self):
+
+
 
 
 class CmdProtocol(LineReceiver):
@@ -281,6 +295,7 @@ def process_web_queue():
         # print("接收20001端口，命令："+str(data))
         # print(type(data))
         msg_type = data['type']
+        serial = data['serialnum']
         if msg_type == 'download':
             serial_code = data['serialnum']
             for client in factory.clients:
@@ -293,35 +308,19 @@ def process_web_queue():
                         client.send(json.dumps(data))
                     elif msg_option == 'updateconf':
                         # 从数据库获取设备配置信息发送给硬件
-                        print("updateconf")
-                        sql = "select id from device_device where serial = %s" % (repr(data['serialnum']))
-                        res = mdb.selectone(sql)
-                        if len(res) <= 0:
-                            print("查询设备配置时，未查询到指定设备")
-                            break
 
-                        sql = "select PM25, PM10, SO2, NO2, CO, O3, WindSpeed, Light, CO2, Temperature, Humidity, AirPressure, Frequency " \
-                              " from device_deviceconf where device_id_id = %d" % (res[0])
-                        res = mdb.selectone(sql)
-                        if len(res) <= 0:
-                            print("查询设备配置时，未查询到配置信息")
-                            break
-                        data_package.settings_data['serialnum'] = data['serialnum']
-                        data_package.settings_data['key'] = data['key']
-                        data_package.settings_data['message']['PM25'] = res[0]
-                        data_package.settings_data['message']['PM10'] = res[1]
-                        data_package.settings_data['message']['SO2'] = res[2]
-                        data_package.settings_data['message']['NO2'] = res[3]
-                        data_package.settings_data['message']['CO'] = res[4]
-                        data_package.settings_data['message']['O3'] = res[5]
-                        data_package.settings_data['message']['WindSpeed'] = res[6]
-                        data_package.settings_data['message']['Light'] = res[7]
-                        data_package.settings_data['message']['CO2'] = res[8]
-                        data_package.settings_data['message']['Temperature'] = res[9]
-                        data_package.settings_data['message']['Humidity'] = res[10]
-                        data_package.settings_data['message']['AirPressure'] = res[11]
-                        data_package.settings_data['message']['Frequency'] = res[12]
-                        client.send(json.dumps(data_package.settings_data))
+                        # 0905170211: 12:58
+                        print("updateconf")
+                        configure = mdb.getdeviceconf(serial)
+                        if configure != False:
+                            data['message'] = configure
+                        else:
+                            print("when using configure from webserver, quary database has fault in %s : %d") % (__file__, sys.getframe().f_lineno)
+
+                        print(data)
+                        client.send(json.dumps(data))
+
+                        # end
                     else:
                         print("无法识别的Web申请...")
                     break

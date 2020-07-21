@@ -83,13 +83,22 @@ class CmdProtocol(LineReceiver):
             msg_type = data['type']
             if msg_type == 'download':
                 # msg_option = data['option']
+
+                # 0905170211: 2020/7/20
+                # 发现这个功能在test里面有了
                 # if msg_option == "active":
-                #     #
+                #
                 # elif msg_option == 'updateconf':
-                #     #
+                #
+                #     time.sleep(1)
+                #
                 # else:
                 #     print("无法识别的Web申请")
+
+                log.msg('web_server of collectserver succeed getting data')
                 DeviceControlProcess(self, data).execute()
+               # end
+
             else:
                 log.msg('消息类型不识别')
         except Exception as e:
