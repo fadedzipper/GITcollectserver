@@ -10,7 +10,7 @@ import datetime
 import data_package
 
 
-mdb = Mysql_db.MysqlConnect('127.0.0.1', 'root', 'root', 'dcs03', 3306)
+mdb = Mysql_db.MysqlConnect('127.0.0.1', 'root', '123456', 'dcs03', 3306)
 keylist = ["PM25", "PM10", "SO2", "NO2", "CO", "O3", "WindSpeed", "Light", "CO2", "Temperature", "Humidity", "AirPressure"]
 # 队列
 web_req_queue, web_resp_queue = None, None
@@ -74,7 +74,7 @@ class AlarmDataProcess(object):
             if self.data['message'][k]['warn']:
 
                 # 0905170211: insert into database
-                print("insert data to db.")
+                # print("insert data to db.")
                 typename = k + "over"
                 mdb.insertAlarmData(self.data['serialnum'], typename, self.data['message'][k]['value'])
                 # 0905170211: end
@@ -194,17 +194,28 @@ class ActiveRespProcess(object):
         # coding here
         # -- [201700100010012: End]
 
-# class afteractive_insertconfintodb(object):
-#     """
-#     设备首次激活之后，向采集服务器发送自己的阈值配置信息，前端可以看到
-#     """
-#     def __init__(self, data):
-#         self.data = data
-#
-#     def insertconf(self):
+# 0905170211: 2020/7/22 14:16
+class afteractive_insertconfintodb(object):
+    """
+    设备首次激活之后，向采集服务器发送自己的阈值配置信息，前端可以看到
+    """
+    def __init__(self, client, data):
+        self.data = data
+        self.client = client
+
+    def insertconf(self):
+        serial = self.data['serialnum']
+        key = mdb.getkeybyserial(self.data['serialnum'])
+        # 秘钥不对数据丢弃
+        if key != self.data['key']:
+            log.msg("设备(%s)在发送配置数据时密钥错误" % serial)
+            return
+        message = self.data['message']
+        mdb.insertdeviceconf(serial, message)
+        log.msg('设备(%s)每次上线发送配置数据到服务器成功' % serial)
 
 
-
+# end
 
 class CmdProtocol(LineReceiver):
     """
@@ -228,6 +239,8 @@ class CmdProtocol(LineReceiver):
         """
         try:
             data = json.loads(line)
+            print("data 已经收到, 数据类型是")
+            print(data['type'], data['option'])
             msg_type = data['type']
             if msg_type == 'hearted':
                 print("hearted message, ignore.")
@@ -241,6 +254,13 @@ class CmdProtocol(LineReceiver):
                 elif msg_option == 'register':
                     self.serial_code = data['serialnum']
                     RegisterDataProcess(self, data).execute()
+
+                # 0905170211
+                elif msg_option == "afteractive_firstcommitconf":
+                    print("------------进入了配置函数")
+                    afteractive_insertconfintodb(self, data).insertconf()
+                # end
+
                 elif msg_option == 'online':
                     self.serial_code = data['serialnum']
                     OnlineDataProcess(self, data).login()

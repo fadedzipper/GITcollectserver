@@ -129,13 +129,37 @@ class OnlineRequest(object):
 #         tcpCliSock.sendall(json.dumps(self.data).encode(ecoding) + delimiter)
 #         return True
 
-# class afteractive_firstcommitconf(object):
-#     def __init__(self, data):
-#         self.data = data
-#
-#     def sendconf(self):
+# 0905170211:
+class afteractive_firstcommitconf(object):
+    def __init__(self, data):
+        self.data = data
 
+    def sendconf(self):
+        self.data['type'] = 'upload'
+        self.data['option'] = 'afteractive_firstcommitconf'
+        self.data['key'] = deviceConfig.device_key
+        self.data['serialnum'] = deviceConfig.device_serial
+        message = {}
+        message['PM25'] = deviceConfig.set_pm25
+        message['PM10'] = deviceConfig.set_pm10
+        message['SO2'] = deviceConfig.set_so2
+        message['NO2'] = deviceConfig.set_no2
+        message['CO'] = deviceConfig.set_co
+        message['O3'] = deviceConfig.set_o3
+        message['WindSpeed'] = deviceConfig.set_windspeed
+        message['Light'] = deviceConfig.set_light
+        message['CO2'] = deviceConfig.set_co2
+        message['Temperature'] = deviceConfig.set_temperature
+        message['Humidity'] = deviceConfig.set_humidity
+        message['AirPressure'] = deviceConfig.set_airpressure
+        message['Frequency'] = deviceConfig.set_frequency
+        self.data['message'] = message
+        print("发到服务器的数据是")
+        print(self.data)
+        print(json.dumps(self.data).encode(ecoding) + delimiter)
+        tcpCliSock.sendall(json.dumps(self.data).encode(ecoding) + delimiter)
 
+# end
 
 class HeartedData(object):
     def __init__(self, data):
@@ -473,8 +497,15 @@ if __name__ == "__main__":
     while deviceConfig.device_active == 0:
         HeartedData(data_package.Hearted_Data).send()
         time.sleep(deviceConfig.set_frequency)
-    print("设备已经激活，开始发送采集数据...")
 
+    # 0905170211
+    conf_data = {}
+    afteractive_firstcommitconf(conf_data).sendconf()
+
+    print("设备发送配置成功发往服务器")
+    # end
+
+    print("设备已经激活，开始发送采集数据...")
     while not is_shutdown:
         # 若注册设备被禁用，则持续发送心跳包
         if deviceConfig.device_disabled == 1:
