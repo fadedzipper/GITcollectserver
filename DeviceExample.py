@@ -188,6 +188,10 @@ class RealTimeDataProcessing(object):
         self.warndata['content'] = 'None'
         self.warndata['key'] = deviceConfig.device_key
         self.data['key'] = deviceConfig.device_key
+        print("设备的序列号为")
+        print(deviceConfig.device_serial)
+        self.data['serialnum'] = deviceConfig.device_serial
+        self.warndata['serialnum'] = deviceConfig.device_serial
         for name in keylist:
             if name in self.data['message'].keys():
                 # print(name)
